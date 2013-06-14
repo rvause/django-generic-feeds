@@ -27,7 +27,7 @@ class Subscription(models.Model):
         app_label = 'feeds'
 
     def __unicode__(self):
-        return '%s: %s' % (self.ct, self.c_obj.name)
+        return '%s: %s' % (self.ct, self.c_obj)
 
 
 class ActivityManager(models.Manager):
