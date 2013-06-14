@@ -4,6 +4,6 @@ functionality in a Django project
 """
 
 
-__version__ = '0.1.4'
+__version__ = '0.1.5'
 __author__ = 'Rick Vause'
 __email__ = 'rvause@gmail.com'
