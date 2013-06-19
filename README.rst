@@ -5,6 +5,8 @@ django-generic-feeds
 A simple way for objects to subscribe to other objects for a "feed-like"
 functionality in a Django project.
 
+.. image:: https://travis-ci.org/rvause/django-generic-feeds.png?branch=master
+
 
 Installation
 ============
