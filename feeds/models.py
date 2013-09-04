@@ -27,7 +27,7 @@ class Subscription(models.Model):
         app_label = 'feeds'
 
     def __unicode__(self):
-        return '%s: %s' % (self.ct, self.c_obj)
+        return u'%s: %s' % (self.ct, self.c_obj)
 
 
 class ActivityManager(models.Manager):
@@ -90,7 +90,7 @@ class Activity(models.Model):
 
     def __unicode__(self):
         if self.object_c_obj and self.target_c_obj:
-            return '%s %s %s on %s %s ago' % (
+            return u'%s %s %s on %s %s ago' % (
                 self.actor_c_obj,
                 self.verb,
                 self.object_c_obj,
@@ -98,21 +98,21 @@ class Activity(models.Model):
                 timesince(self.published)
             )
         elif self.object_c_obj:
-            return '%s %s %s %s ago' % (
+            return u'%s %s %s %s ago' % (
                 self.actor_c_obj,
                 self.verb,
                 self.object_c_obj,
                 timesince(self.published)
             )
         elif self.target_c_obj:
-            return '%s %s on %s %s ago' % (
+            return u'%s %s on %s %s ago' % (
                 self.actor_c_obj,
                 self.verb,
                 self.target_c_obj,
                 timesince(self.published)
             )
         else:
-            return '%s %s %s ago' % (
+            return u'%s %s %s ago' % (
                 self.actor_c_obj,
                 self.verb,
                 timesince(self.published)
