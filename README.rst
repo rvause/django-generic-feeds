@@ -5,6 +5,12 @@ django-generic-feeds
 A simple way for objects to subscribe to other objects for a "feed-like"
 functionality in a Django project.
 
+You can use django-generic-feeds to create "feeds" for that can subscribe to
+other objects and then list activity that happen on those objects. For example
+you may wish for your users to have a feed with subscriptions to other users
+to create an activity stream for users for a primitive Twitter clone.
+
+
 .. image:: https://travis-ci.org/rvause/django-generic-feeds.png?branch=master
 
 
@@ -15,8 +21,10 @@ Installation
 
 or
 
-Run ``setup.py install`` or add to your Python path and include ``'feeds'``
-in your ``INSTALLED_APPS`` setting.
+Run ``setup.py install`` or add to your Python path.
+
+
+You will need to include ``'feeds'`` in your ``INSTALLED_APPS`` setting.
 
 
 Usage
@@ -50,6 +58,14 @@ Then the feed's activity will be populated with this activity::
 
 
 See the source code for more.
+
+
+Running Tests
+=============
+
+To run the tests::
+
+    python setup.py test
 
 
 Need Help?
